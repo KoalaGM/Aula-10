@@ -22,7 +22,6 @@ def gerar_numeros(i, f, q):
     return lst_num
 
 
-
 ini = int(input('Informe o primeiro número: '))
 fin = int(input('Informe o último número: '))
 qtd = int(input('Quantos numeros?: '))

@@ -1,3 +1,6 @@
+import random
+
+
 def somar(x, y):
     return x + y
 
@@ -19,8 +22,11 @@ def dividir(x, y):
 
 def obter_entrada():
     try:
-        x = float(input("Primeiro número: "))
-        y = float(input("Segundo número: "))
+        # x = float(input("Primeiro número: "))
+        # y = float(input("Segundo número: "))
+        y = random.randint(1, 10)
+        x = random.randint(1, 10)
+        print(f"Os numeros da vez são {x} e {y}")
         return x, y
     except ValueError:
         print("Erro: por favor, insira números válidos.")
@@ -32,16 +38,15 @@ def calculadora():
     op = input("Escolha uma operação: ")
 
     x, y = obter_entrada()
-    if x is not None and y is not None:
-        if op == '+':
+    if op == '+':
             print("Resultado:", somar(x, y))
-        elif op == '-':
+    elif op == '-':
             print("Resultado:", subtrair(x, y))
-        elif op == '*':
+    elif op == '*':
             print("Resultado:", multiplicar(x, y))
-        elif op == '/':
+    elif op == '/':
             print("Resultado:", dividir(x, y))
-        else:
+    else:
             print("Operação inválida. Escolha entre +, -, * ou /.")
 
 
