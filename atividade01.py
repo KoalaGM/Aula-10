@@ -1,3 +1,6 @@
+import random
+
+
 def calculadora():
     print("Operações: + - * /")
     op = input("Escolha uma operação: ")
@@ -5,6 +8,7 @@ def calculadora():
     try:
         x = float(input("Primeiro número: "))
         y = float(input("Segundo número: "))
+        
 
         if op == '+':
             print("Resultado:", x + y)

@@ -22,11 +22,9 @@ def dividir(x, y):
 
 def obter_entrada():
     try:
-        # x = float(input("Primeiro número: "))
-        # y = float(input("Segundo número: "))
         y = random.randint(1, 10)
         x = random.randint(1, 10)
-        print(f"Os numeros da vez são {x} e {y}")
+        print(f"Os números da vez são {x} e {y}")
         return x, y
     except ValueError:
         print("Erro: por favor, insira números válidos.")
@@ -38,15 +36,17 @@ def calculadora():
     op = input("Escolha uma operação: ")
 
     x, y = obter_entrada()
-    if op == '+':
+
+    match op:
+        case '+':
             print("Resultado:", somar(x, y))
-    elif op == '-':
+        case '-':
             print("Resultado:", subtrair(x, y))
-    elif op == '*':
+        case '*':
             print("Resultado:", multiplicar(x, y))
-    elif op == '/':
+        case '/':
             print("Resultado:", dividir(x, y))
-    else:
+        case _:
             print("Operação inválida. Escolha entre +, -, * ou /.")
 
 
